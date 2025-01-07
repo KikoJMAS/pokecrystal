@@ -1267,13 +1267,13 @@ Pryce's dialog ("That BADGE will raise the SPECIAL stats of POKéMON.") implies 
 ```
 
 
-### "Smart" AI does not encourage Solar Beam, Flame Wheel, or Moonlight during Sunny Day
+### "Smart" AI does not encourage Sunny Day when it knows Solar Beam, Flame Wheel, or Moonlight
 
 **Fix:** Edit `SunnyDayMoves` in [data/battle/ai/sunny_day_moves.asm](https://github.com/pret/pokecrystal/blob/master/data/battle/ai/sunny_day_moves.asm):
 
 ```diff
  SunnyDayMoves:
--; BUG: "Smart" AI does not encourage Solar Beam, Flame Wheel, or Moonlight during Sunny Day (see docs/bugs_and_glitches.md)
+-; BUG: "Smart" AI does not encourage Sunny Day when it knows Solar Beam, Flame Wheel, or Moonlight (see docs/bugs_and_glitches.md)
  	db FIRE_PUNCH
  	db EMBER
  	db FLAMETHROWER
@@ -2063,6 +2063,7 @@ Most trainer classes always use the same sprite and color for their overworld NP
 - [maps/Route44.asm](https://github.com/pret/pokecrystal/blob/master/maps/Route44.asm): `TrainerPokemaniacZach` should use `PAL_NPC_BLUE`, not `PAL_NPC_GREEN`
 - [maps/UnionCaveB2F.asm](https://github.com/pret/pokecrystal/blob/master/maps/UnionCaveB2F.asm): `TrainerCooltrainermNick` should use `SPRITE_COOLTRAINER_M`, not `SPRITE_ROCKER`
 - [maps/FuchsiaPokecenter1F.asm](https://github.com/pret/pokecrystal/blob/master/maps/FuchsiaPokecenter1F.asm): `FuchsiaPokecenter1FNurseScript` should use `PAL_NPC_RED`, not `PAL_NPC_GREEN`
+- [maps/IlexForest.asm](https://github.com/pret/pokecrystal/blob/master/maps/IlexForest.asm): `TrainerBugCatcherWayne` should use `SPRITE_BUG_CATCHER` and `PAL_NPC_BROWN`, not `SPRITE_YOUNGSTER` and `PAL_NPC_GREEN`
 
 Most of the NPCs in [maps/NationalParkBugContest.asm](https://github.com/pret/pokecrystal/blob/master/maps/NationalParkBugContest.asm) and [maps/Route36NationalParkGate.asm](https://github.com/pret/pokecrystal/blob/master/maps/Route36NationalParkGate.asm) are also inconsistent with their trainers from other maps:
 
